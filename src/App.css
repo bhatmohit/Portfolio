@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+  margin-top: 40px;
+  font-weight: normal;
+  color: rgb(118, 20, 245);
+  font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .main{
+  margin: 30px;
+} */
+
+.navbar {
+  width: 100vw;
+  height: 8vh;
+  background: black;
+  position: fixed;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-right;
+  padding: 0px;
+  /* margin-left: 10px  */
+  /* margin-bottom: 40px; */
+  /* scroll-behavior: smooth; */
+  /* transition: top 0.3s; */
+}
+
+.navbar a{
+  color: grey;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.navbar a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:active {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#home {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: lightgrey;
 }
+
+.slide-container{
+width: 60%;
+margin: auto;
+}
+
+/* .slide{
+
+} */
+
+#intro {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: lightgrey;
+}
+
+.introcontainer{
+  display: flex;
+  /* top: 50%; */
+  margin: auto;
+  /* background-color: blue; */
+  justify-content: space-around;
+  width: 80vw;
+  /* height: 50vh; */
+}
+
+.introcontainer p{
+  padding-bottom: 10px;
+}
+
+.introcontainer img{
+  width: 20vw;
+}
+
+.intro-content{
+  background-color: white;
+  width: 25vw;
+  padding: 10px;
+  border-radius: 10px;
+} 
+
+.intro-content p{
+  margin-bottom: 20px;
+}
+
+.introbuttons{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.introbuttons button{
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  /* margin: 10px; */
+}
+
+/* .intro-content p{
+  margin-left: 10px;
+} */
+
+#experience {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: lightgrey;
+}
+
+.experiencecontainer{
+ /* height: 50vh; */
+ width: 75vw;
+ background-image: linear-gradient(-225deg,#2cd8d5,#6b8dd6 48%,#8e37d7);
+ margin: auto;
+ align-items: center;
+ border-radius: 5px;
+ /* padding: 20px; */
+}
+
+.wrapper{
+  margin-bottom: 5vh;
+}
+
+.experiencecard{
+  margin: auto;
+  width: 70vw;
+  text-align: center;
+  font-size: larger;
+  background-color: white;
+  /* border-radius: 10px; */
+}
+
+.experiencecard ul{
+  margin-left: 30px;
+}
+
+.experiencecontainer img{
+  width: 10vw;
+  height: 10vh;
+  /* margin: auto; */
+  /* margin: 0; */
+}
+
+.experiencecontainer h4{
+  margin: 0;
+}
+
+.experiencecontainer p{
+  text-align: left;
+}
+
+#skills {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: lightgrey;
+  /* width: 100vw; */
+}
+
+h2 {
+  padding-bottom: 5vh;
+  text-align: center;
+  /* margin: auto; */
+}
+
+.skillscontainer{
+  display: flex;
+  margin: auto;
+  /* width: 80vw; */
+  /* height: 50vh; */
+  justify-content: space-around;
+  flex-direction: row;
+  /* vertical-align: middle; */
+}
+
+ .skillscard img{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.skillscard ul{
+  list-style: none;
+  /* padding: 0; */
+  /* margin-bottom: 50px; */
+}
+
+.skillscard li{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.skillscard h5{
+  padding: 10px;
+  font-size: 20px;
+}
+
+.skillscard{
+ /* height: 30vh; */
+ background-color: white;
+ text-align: center;
+ width: 25vw;
+ margin: 20px;
+ border-radius: 10px;
+ transition: all .2s ease-in-out;
+}
+
+.skillscard:hover{
+  transform: scale(1.1);
+}
+
+#contact {
+  height: 50vh;
+  padding-top: 5vh;
+  background-color: lightgrey;
+  /* width: 100vw; */
+}
+
+.contactcontainer{
+  width: 60vw;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  height: 20vh;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contactcontainer button{
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.contactcontainer i{
+  padding: 0.5vw;
+}
+
