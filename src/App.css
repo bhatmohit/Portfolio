@@ -7,11 +7,17 @@ html {
   scroll-behavior: smooth;
 }
 
+p{
+  font-family: 'Karla',sans-serif;
+}
+
 h2{
   margin-top: 40px;
   font-weight: normal;
-  color: rgb(118, 20, 245);
+  color: rgba(35,29,90,.9725490196078431);
   font-size: 40px;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Karla',sans-serif;
 }
 
 /* .main{
@@ -90,12 +96,12 @@ margin: auto;
 }
 
 .introcontainer img{
-  width: 20vw;
+  width: 30vw;
 }
 
 .intro-content{
   background-color: white;
-  width: 25vw;
+  width: 40vw;
   padding: 10px;
   border-radius: 10px;
 } 

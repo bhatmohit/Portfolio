@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import './Slider.css';
+import './Timeline.css';
 import {useState} from 'react';
 import Skills from './Skills.js';
 import Contact from './Contact/Contact.js';
@@ -18,7 +19,21 @@ import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 const sql = process.env.PUBLIC_URL + '/images/sql_background.png';
 const coding = process.env.PUBLIC_URL +'/images/coding.png';
 
-
+const projects = [
+  {
+    id: 1,
+    title: 'Project One',
+    description: 'Description of Project One...',
+    date: '2023-07-15',
+  },
+  {
+    id: 2,
+    title: 'Project Two',
+    description: 'Description of Project Two...',
+    date: '2023-08-05',
+  },
+  // Add more projects to the array
+];
 
 function App() {
   const [docName, setDocName] = useState('');
@@ -53,10 +68,11 @@ function App() {
   return (
     <>
       <nav className='navbar'>
-      <a href='#home'>Home</a>
+      {/* <a href='#home'>Home</a> */}
       <a href="#intro">About Me</a>
       <a href='#experience'>Experience</a>
-      <a href='#skills'>Skills</a>  
+      <a href='#skills'>Skills</a> 
+      <a href='#timeline'>Projects</a> 
       <a href='#contact'>Contact</a>      
       </nav>
       <div className='main'>
@@ -78,7 +94,7 @@ function App() {
       <section id="intro">
         <h2>ABOUT ME</h2>
         <div className="introcontainer">
-          <img src='images/mypic.png'></img>
+          <img src='images/my_pic.jpg'></img>
           {/* <img src={my_image}></img> */}
           <div className='intro-content'> 
           <p>Howdy! I am <strong>Mohit Bhat</strong></p>
@@ -89,11 +105,11 @@ function App() {
           </p> */}
           <p>
           A technology enthusiast and currently a graduate student at Texas A&M University, my experience includes developing web applications for financial reporting, working with CRM databases, designing SQL procedures to implement role-based access control, and using CI/CD tools to configure pipelines and automate application deployments.
-<br/>
+<br/><br/>
 Technical Forte: <br/>
-Programming/Other Languages: Python, SQL, JavaScript, HTML, CSS, Shell Scripting <br/>
-Libraries/Frameworks: Pandas, NumPy, React.js, .NET Core <br/>
-Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel 
+<strong>Programming:</strong> Python, SQL, JavaScript, HTML, CSS, Shell Scripting <br/>
+<strong>Libraries:</strong> Pandas, NumPy, Matplotlib, Scikit-learn, React.js <br/>
+<strong>Tools:</strong> Jupyter, Colab, Ansible, Jenkins, Github, AWS EC2, AWS IAM, Tableau <br/>
           </p>
           <div className='introbuttons'>
             <a href='#contact'>
@@ -201,6 +217,20 @@ Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel
         
       </div>
       </section>
+
+      <section id="timeline">
+      {projects.map((project) => (
+        <div key={project.id} className="timeline-item">
+          <div className="timeline-content">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <span>{project.date}</span>
+          </div>
+        </div>
+      ))}
+    </section>
+
+
       <section id='contact'>
         <h2>LET'S CONNECT!</h2>
         <div className='contactcontainer'>
