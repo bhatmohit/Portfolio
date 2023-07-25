@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './Slider.css';
 import {useState} from 'react';
 import Skills from './Skills.js';
 import Contact from './Contact/Contact.js';
@@ -13,7 +14,11 @@ import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import htmlimg from './../images/html5.png';
 
-const my_image = process.env.PUBLIC_URL + '/images/my_pic.jpg';
+
+const sql = process.env.PUBLIC_URL + '/images/sql_background.png';
+const coding = process.env.PUBLIC_URL +'/images/coding.png';
+
+
 
 function App() {
   const [docName, setDocName] = useState('');
@@ -21,8 +26,29 @@ function App() {
   const [category, setCategory] = useState('');
   const [email, setEmail] = useState('');
   const [percent, setPercent] = useState('');
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
 
   // const onChange(variable, )
+  const imageUrls = [
+    '/images/coding.png',
+    {coding},
+    {sql},
+    // Add more image URLs here
+  ];
+
+
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % imageUrls.length);
+  };
+  
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + imageUrls.length) % imageUrls.length);
+  };
+  
+
 
   return (
     <>
@@ -38,20 +64,22 @@ function App() {
           <h2>Howdy!</h2>
           
 
-          <div class="slider-container">
-    <div class="slider">
-      <div class="slide" style="background-image: url('images/sql_background.png');"></div>
-      <div class="slide" style="background-image: url('./images/coding.png');"></div>
-      <div class="slide" style="background-image: url('image3.jpg');"></div>
+          <div className="slider-container">
+      <div className="slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {imageUrls.map((imageUrl, index) => (
+          <div key={index} className="slide" style={{ backgroundImage: `url(${imageUrl})` }} />
+        ))}
+      </div>
+      <button className="prev-button" onClick={prevSlide}>&#10094;</button>
+      <button className="next-button" onClick={nextSlide}>&#10095;</button>
     </div>
-  </div>
 
         </section> */}
       <section id="intro">
         <h2>ABOUT ME</h2>
         <div className="introcontainer">
-          {/* <img src='images/mypic.png'></img> */}
-          <img src={my_image}></img>
+          <img src='images/mypic.png'></img>
+          {/* <img src={my_image}></img> */}
           <div className='intro-content'> 
           <p>Howdy! I am <strong>Mohit Bhat</strong></p>
           {/* <p>A passionate programmer and currently a graduate student at Texas A&M University. I am a Software Developer with JavaScript, React.js and SQL as my core tech stack.
@@ -62,10 +90,10 @@ function App() {
           <p>
           A technology enthusiast and currently a graduate student at Texas A&M University, my experience includes developing web applications for financial reporting, working with CRM databases, designing SQL procedures to implement role-based access control, and using CI/CD tools to configure pipelines and automate application deployments.
 <br/>
-Technical Forte:
-Programming/Other Languages: Python, SQL, JavaScript, HTML, CSS, Shell Scripting
-Libraries/Frameworks: Pandas, NumPy, React.js, .NET Core 
-Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel
+Technical Forte: <br/>
+Programming/Other Languages: Python, SQL, JavaScript, HTML, CSS, Shell Scripting <br/>
+Libraries/Frameworks: Pandas, NumPy, React.js, .NET Core <br/>
+Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel 
           </p>
           <div className='introbuttons'>
             <a href='#contact'>
@@ -104,6 +132,7 @@ Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel
       {/* <br></br> */}
       <div className='experiencecard'>
        <img src='images/nomura.png'></img>
+       {/* <img src={nomura}></img> */}
        <h4>Technology Analyst Intern</h4>
        <p>
         <ul>
