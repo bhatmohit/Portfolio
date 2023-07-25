@@ -53,10 +53,18 @@ function App() {
           <img src='images/mypic.png'></img>
           <div className='intro-content'> 
           <p>Howdy! I am <strong>Mohit Bhat</strong></p>
-          <p>A passionate programmer and currently a graduate student at Texas A&M University. I am a Software Developer with JavaScript, React.js and SQL as my core tech stack.
+          {/* <p>A passionate programmer and currently a graduate student at Texas A&M University. I am a Software Developer with JavaScript, React.js and SQL as my core tech stack.
              In 2020, I completed my Bachelors in Computer Engineering and worked as a Software Developer for two years. 
              Developing real-world solutions that can transform the business through optimization and performance drives my motivation.
              I love learning about new technologies, using them to solve problems, and building better and scalable products.
+          </p> */}
+          <p>
+          A technology enthusiast and currently a graduate student at Texas A&M University, my experience includes developing web applications for financial reporting, working with CRM databases, designing SQL procedures to implement role-based access control, and using CI/CD tools to configure pipelines and automate application deployments.
+<br/>
+Technical Forte:
+Programming/Other Languages: Python, SQL, JavaScript, HTML, CSS, Shell Scripting
+Libraries/Frameworks: Pandas, NumPy, React.js, .NET Core 
+Other Tools: Jupyter, Colab, Ansible, Jenkins, Github, Excel
           </p>
           <div className='introbuttons'>
             <a href='#contact'>
@@ -76,7 +84,7 @@ function App() {
       <div className='experiencecontainer'>
       <div className='experiencecard'>
        <img src='images/nomura.png'></img>
-       <h4>Software Developer</h4>
+       <h4>Technology Analyst</h4>
        <p>
         <ul>
        <li>Built a new module to implement excel download of reports and search filters in MIS-X, a global reporting application developed using ReactJS and .NET Core, which facilitated reporting procedures by 60%</li>  
@@ -95,7 +103,7 @@ function App() {
       {/* <br></br> */}
       <div className='experiencecard'>
        <img src='images/nomura.png'></img>
-       <h4>Intern</h4>
+       <h4>Technology Analyst Intern</h4>
        <p>
         <ul>
           <li>Integrated JSON Web Token authentication in an application developed in the Expense processing department with ReactJs and .NET Core Web API</li>
