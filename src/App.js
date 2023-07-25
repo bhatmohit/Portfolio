@@ -34,7 +34,7 @@ function App() {
       <div className='main'>
         <section id='home'>
           <h2>Howdy!</h2>
-          <div className='home'>
+          {/* <div className='home'>
             <div className='slide-container'>
             <div className='slide'>
             <img src='./images/coding.png' alt='coding'></img>
@@ -45,7 +45,17 @@ function App() {
             </div>
             <button id='prevBtn'>Previous</button>
             <button id='nextBtn'>Next</button>
-          </div>
+          </div> */}
+          
+
+          <div class="slider-container">
+    <div class="slider">
+      <div class="slide" style="background-image: url('images/sql_background.png');"></div>
+      <div class="slide" style="background-image: url('./images/coding.png');"></div>
+      <div class="slide" style="background-image: url('image3.jpg');"></div>
+    </div>
+  </div>
+
         </section>
       <section id="intro">
         <h2>ABOUT ME</h2>
