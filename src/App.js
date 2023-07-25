@@ -13,6 +13,8 @@ import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import htmlimg from './../images/html5.png';
 
+const my_image = process.env.PUBLIC_URL + '/images/my_pic.jpg';
+
 function App() {
   const [docName, setDocName] = useState('');
   const [docType, setDocType] = useState('');
@@ -48,7 +50,8 @@ function App() {
       <section id="intro">
         <h2>ABOUT ME</h2>
         <div className="introcontainer">
-          <img src='images/mypic.png'></img>
+          {/* <img src='images/mypic.png'></img> */}
+          <img src={my_image}></img>
           <div className='intro-content'> 
           <p>Howdy! I am <strong>Mohit Bhat</strong></p>
           {/* <p>A passionate programmer and currently a graduate student at Texas A&M University. I am a Software Developer with JavaScript, React.js and SQL as my core tech stack.
