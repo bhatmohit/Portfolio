@@ -32,20 +32,8 @@ function App() {
       <a href='#contact'>Contact</a>      
       </nav>
       <div className='main'>
-        <section id='home'>
+        {/* <section id='home'>
           <h2>Howdy!</h2>
-          {/* <div className='home'>
-            <div className='slide-container'>
-            <div className='slide'>
-            <img src='./images/coding.png' alt='coding'></img>
-            <img src='images/sql_background.png'></img>
-            <img src='images/'></img>
-            <img src='images/'></img>
-            </div>
-            </div>
-            <button id='prevBtn'>Previous</button>
-            <button id='nextBtn'>Next</button>
-          </div> */}
           
 
           <div class="slider-container">
@@ -56,7 +44,7 @@ function App() {
     </div>
   </div>
 
-        </section>
+        </section> */}
       <section id="intro">
         <h2>ABOUT ME</h2>
         <div className="introcontainer">
